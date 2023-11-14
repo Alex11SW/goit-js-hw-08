@@ -4,6 +4,7 @@
   "description": "",
   "homepage": "https://Alex11SW.github.io/goit-js-hw-08/",
 "scripts": {
+  "start": "parcel serve src/index.html",
   "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
 },
   "repository": {

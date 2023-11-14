@@ -19,7 +19,7 @@ function onFormInput(e) {
 
 
 
-function onLoad() {
+function onContentLoaded() {
     const email = loadFromLS('email');
     const message = loadFromLS('message');
     
@@ -28,4 +28,4 @@ function onLoad() {
      refs.formElem.elements.email.value = email;
      refs.formElem.elements.message.value = message;
 }
- onload();
+document.addEventListener('DOMContentLoaded', onContentLoaded);
