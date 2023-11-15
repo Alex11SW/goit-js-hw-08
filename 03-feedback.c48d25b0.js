@@ -1,4 +1,4 @@
-var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},t={};t=/**
+!function(){var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},t={};t=/**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
  * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -35,7 +35,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  * @private
  * @param {string} string The string to trim.
  * @returns {string} Returns the trimmed string.
- */function(e){return e?e.slice(0,f(e)+1).replace(u,""):e};var s={},m={},d={};d=o.Symbol;var v={},b=Object.prototype,g=b.hasOwnProperty,p=b.toString,y=d?d.toStringTag:void 0;v=/**
+ */function(e){return e?e.slice(0,f(e)+1).replace(u,""):e};var m={},s={},d={};d=o.Symbol;var v={},b=Object.prototype,g=b.hasOwnProperty,p=b.toString,y=d?d.toStringTag:void 0;v=/**
  * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
  *
  * @private
@@ -47,7 +47,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  * @private
  * @param {*} value The value to convert.
  * @returns {string} Returns the converted string.
- */function(e){return O.call(e)};/** Built-in value references. */var S=d?d.toStringTag:void 0;m=/**
+ */function(e){return O.call(e)};/** Built-in value references. */var S=d?d.toStringTag:void 0;s=/**
  * The base implementation of `getTag` without fallbacks for buggy environments.
  *
  * @private
@@ -76,7 +76,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.isObjectLike(null);
  * // => false
- */function(e){return null!=e&&"object"==typeof e},s=/**
+ */function(e){return null!=e&&"object"==typeof e},m=/**
  * Checks if `value` is classified as a `Symbol` primitive or object.
  *
  * @static
@@ -92,11 +92,8 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.isSymbol('abc');
  * // => false
- */function(e){return"symbol"==typeof e||E(e)&&"[object Symbol]"==m(e)};/** Used as references for various `Number` constants. */var h=0/0,w=/^[-+]0x[0-9a-f]+$/i,L=/^0b[01]+$/i,T=/^0o[0-7]+$/i,k=parseInt;function I(e,t){localStorage.setItem(e,JSON.stringify(t))}const N={formElem:document.querySelector(".feedback-form")};N.formElem.addEventListener("input",function(e){let t=e.target.name,n=e.target.value;I(t,n)}),N.formElem.addEventListener("submit",function(e){e.preventDefault();let t=N.formElem.elements.email.value,n=N.formElem.elements.message.value;I("feedback-form-state",{email:t,message:n}),console.log({email:t,message:n}),e.target.reset();// localStorage.removeItem('email');
+ */function(e){return"symbol"==typeof e||E(e)&&"[object Symbol]"==s(e)};/** Used as references for various `Number` constants. */var h=0/0,w=/^[-+]0x[0-9a-f]+$/i,L=/^0b[01]+$/i,T=/^0o[0-7]+$/i,k=parseInt;function I(e,t){localStorage.setItem(e,JSON.stringify(t))}function N(e){let t=localStorage.getItem(e);try{return JSON.parse(t)}catch(e){return t}}let $={formElem:document.querySelector(".feedback-form")};$.formElem.addEventListener("input",function(e){let t=e.target.name,n=e.target.value;I(t,n)}),$.formElem.addEventListener("submit",function(e){e.preventDefault();let t=$.formElem.elements.email.value,n=$.formElem.elements.message.value;I("feedback-form-state",{email:t,message:n}),console.log({email:t,message:n}),e.target.reset();// localStorage.removeItem('email');
 // localStorage.removeItem('message');
-}),document.addEventListener("DOMContentLoaded",function(){// const email = loadFromLS('email');
-// const message = loadFromLS('message');
-// console.log(refs.formElem.elements);
-let e=function(e){let t=localStorage.getItem(e);try{return JSON.parse(t)}catch(e){return t}}("feedback-form-state");e&&(N.formElem.elements.email.value=email||"email",N.formElem.elements.message.value=message||"input text")});//# sourceMappingURL=03-feedback.7c76f4cb.js.map
+}),document.addEventListener("DOMContentLoaded",function(){let e=N("email"),t=N("message"),n=N("feedback-form-state");n&&($.formElem.elements.email.value=e||"email",$.formElem.elements.message.value=t||"input text")})}();//# sourceMappingURL=03-feedback.c48d25b0.js.map
 
-//# sourceMappingURL=03-feedback.7c76f4cb.js.map
+//# sourceMappingURL=03-feedback.c48d25b0.js.map
