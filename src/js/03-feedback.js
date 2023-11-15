@@ -22,28 +22,26 @@ function onFormSubmit(e) {
 
     const email = refs.formElem.elements.email.value;
     const message = refs.formElem.elements.message.value;
-    const obj = {
+
+      if (email && message) {
+    const formData = {
         email,
         message
     };
+      console.log(formData);
+      e.target.reset();
 
-  saveToLS('feedback-form-state', {
-        email,
-        message
-    });
+  saveToLS('feedback-form-state', formData);
+  localStorage.removeItem('feedback-form-state');
+  
+      }else{
+        alert('Please fill in all fields before submitting.');
+    }
 
-    console.log(obj);
-    e.target.reset();
-    
-    // localStorage.removeItem('email');
-    // localStorage.removeItem('message');
 }
  
 function onContentLoaded() {
-     const email = loadFromLS('email');
-     const message = loadFromLS('message');
-    // console.log(refs.formElem.elements);
-
+  
     const formData = loadFromLS('feedback-form-state');
 
     if (formData) {

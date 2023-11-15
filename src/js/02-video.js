@@ -18,4 +18,3 @@ const saveTimeToLocalStorage = throttle(function (currentTime) {
   localStorage.setItem('videoplayer-current-time', currentTime);
 }, 1000);
 
-player.play();

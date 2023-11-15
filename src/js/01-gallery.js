@@ -25,7 +25,7 @@ function createGalleryItem({ original, preview, description }) {
 const galleryMarkup = galleryItems.map(createGalleryItem).join("");
 list.insertAdjacentHTML('beforeend', galleryMarkup);
 
-const lightbox = new SimpleLightbox('.gallery a', {
+   new SimpleLightbox('.gallery a', {
     captions: true,
     captionDelay: 250,
     captionsData: 'alt',
