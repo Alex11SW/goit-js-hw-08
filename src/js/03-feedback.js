@@ -40,8 +40,8 @@ function onFormSubmit(e) {
 }
  
 function onContentLoaded() {
-    // const email = loadFromLS('email');
-    // const message = loadFromLS('message');
+     const email = loadFromLS('email');
+     const message = loadFromLS('message');
     // console.log(refs.formElem.elements);
 
     const formData = loadFromLS('feedback-form-state');
