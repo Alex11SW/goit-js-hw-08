@@ -8,47 +8,55 @@ import { saveToLS, loadFromLS } from './helpers.js';
 const refs = {
     formElem: document.querySelector('.feedback-form'),
 };
+
+
 refs.formElem.addEventListener('input', onFormInput);
 refs.formElem.addEventListener('submit', onFormSubmit);
+document.addEventListener('DOMContentLoaded', onContentLoaded);  
+
 
 function onFormInput(e) {
-    const key = e.target.name;
-    const value = e.target.value;
+    const email = refs.formElem.elements.email.value;
+    const message = refs.formElem.elements.message.value;
 
-    saveToLS(key, value);
+    const formData = {
+        email,
+        message
+    };
+
+    saveToLS('feedback-form-state', formData);
 }
+
 function onFormSubmit(e) {
     e.preventDefault();
 
     const email = refs.formElem.elements.email.value;
     const message = refs.formElem.elements.message.value;
 
-      if (email && message) {
-    const formData = {
-        email,
-        message
-    };
-      console.log(formData);
-      e.target.reset();
+    if (email && message) {
+        const formData = {
+            email,
+            message
+        };
 
-  saveToLS('feedback-form-state', formData);
-  localStorage.removeItem('feedback-form-state');
-  
-      }else{
+        console.log(formData);
+        e.target.reset();
+        saveToLS('feedback-form-state', {});
+    } else {
         alert('Please fill in all fields before submitting.');
     }
-
 }
- 
+
 function onContentLoaded() {
-  
     const formData = loadFromLS('feedback-form-state');
 
     if (formData) {
-        refs.formElem.elements.email.value = email || "email";
-        refs.formElem.elements.message.value = message || "input text";
+        refs.formElem.elements.email.value = formData.email || "email";
+        refs.formElem.elements.message.value = formData.message || "input text";
     }
 }
-document.addEventListener('DOMContentLoaded', onContentLoaded);  
+
+
+
 
 
