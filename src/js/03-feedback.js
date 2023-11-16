@@ -48,12 +48,12 @@ function onFormSubmit(e) {
 }
 
 function onContentLoaded() {
-    const formData = loadFromLS('feedback-form-state');
+    const formData = loadFromLS('feedback-form-state') || {};
 
-    if (formData) {
-        refs.formElem.elements.email.value = formData.email || "email";
-        refs.formElem.elements.message.value = formData.message || "input text";
-    }
+     
+         refs.formElem.elements.email.value = formData.email || "email";
+         refs.formElem.elements.message.value = formData.message || "input text";
+     
 }
 
 
