@@ -1,4 +1,4 @@
-var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},t={};t=/**
+!function(){var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},t={};t=/**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
  * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -92,6 +92,6 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.isSymbol('abc');
  * // => false
- */function(e){return"symbol"==typeof e||S(e)&&"[object Symbol]"==u(e)};/** Used as references for various `Number` constants. */var h=0/0,w=/^[-+]0x[0-9a-f]+$/i,k=/^0b[01]+$/i,L=/^0o[0-7]+$/i,T=parseInt;function I(e,t){localStorage.setItem(e,JSON.stringify(t))}const N={formElem:document.querySelector(".feedback-form")};N.formElem.addEventListener("input",function(e){let t=N.formElem.elements.email.value,n=N.formElem.elements.message.value;I("feedback-form-state",{email:t,message:n})}),N.formElem.addEventListener("submit",function(e){e.preventDefault();let t=N.formElem.elements.email.value,n=N.formElem.elements.message.value;t&&n?(console.log({email:t,message:n}),e.target.reset(),I("feedback-form-state",{})):alert("Please fill in all fields before submitting.")}),document.addEventListener("DOMContentLoaded",function(){let e=function(e){let t=localStorage.getItem(e);try{return JSON.parse(t)}catch(e){return t}}("feedback-form-state");e&&(N.formElem.elements.email.value=e.email||"email",N.formElem.elements.message.value=e.message||"input text")}//# sourceMappingURL=03-feedback.59085276.js.map
-);
-//# sourceMappingURL=03-feedback.59085276.js.map
+ */function(e){return"symbol"==typeof e||S(e)&&"[object Symbol]"==u(e)};/** Used as references for various `Number` constants. */var h=0/0,w=/^[-+]0x[0-9a-f]+$/i,k=/^0b[01]+$/i,L=/^0o[0-7]+$/i,T=parseInt;function I(e,t){localStorage.setItem(e,JSON.stringify(t))}let N={formElem:document.querySelector(".feedback-form")};N.formElem.addEventListener("input",function(e){let t=N.formElem.elements.email.value,n=N.formElem.elements.message.value;I("feedback-form-state",{email:t,message:n})}),N.formElem.addEventListener("submit",function(e){e.preventDefault();let t=N.formElem.elements.email.value,n=N.formElem.elements.message.value;t&&n?(console.log({email:t,message:n}),e.target.reset(),I("feedback-form-state",{})):alert("Please fill in all fields before submitting.")}),document.addEventListener("DOMContentLoaded",function(){let e=function(e){let t=localStorage.getItem(e);try{return JSON.parse(t)}catch(e){return t}}("feedback-form-state")||{};N.formElem.elements.email.value=e.email||"email",N.formElem.elements.message.value=e.message||"input text"})}();//# sourceMappingURL=03-feedback.f11d12ea.js.map
+
+//# sourceMappingURL=03-feedback.f11d12ea.js.map
