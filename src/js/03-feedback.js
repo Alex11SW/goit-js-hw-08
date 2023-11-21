@@ -51,8 +51,7 @@ function onContentLoaded() {
     const formData = loadFromLS('feedback-form-state') || {};
 
      
-         refs.formElem.elements.email.value = formData.email || "email";
-         refs.formElem.elements.message.value = formData.message || "input text";
+      
      
 }
 
